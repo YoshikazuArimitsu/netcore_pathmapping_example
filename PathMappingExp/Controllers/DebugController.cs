@@ -4,6 +4,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace PathMappingExp.Controllers {
@@ -18,7 +19,7 @@ namespace PathMappingExp.Controllers {
 
         [HttpGet]
         public string Get() {
-            return Config["Value"];
+            return $"Value={Config["Value"]}, DictValue.A={Config["DictValue:A"]}, DictValue.B={Config["DictValue:B"]}, DictValue.C={Config["DictValue:C"]}";
         }
     }
 }
