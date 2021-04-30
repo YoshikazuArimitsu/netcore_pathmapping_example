@@ -18,7 +18,7 @@ namespace PathMappingExp.Controllers {
 
         [HttpGet]
         public string Get() {
-            return Config["ASPNETCORE_APPL_PATH"];
+            return Config["Value"];
         }
     }
 }
